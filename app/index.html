@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <!-- ionic meta tags -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!-- custom meta tags -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>dlq</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="dlq" >
+
+    <div data-ui-view=""></div>
+
+    <!-- will be a 404 during development -->
+    <script src="cordova.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <script src="app.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/controllers/indexCtrl.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
