@@ -10,3 +10,8 @@
 
 .bg0{background-color: #F5F5F5;}
 .bg1{background-color: #FFFFFF;}
+
+.bar .back-button.hide, .bar .buttons .hide
+{
+    display: inline !important;
+}

@@ -12,79 +12,40 @@ angular.module('main', [
   $ionicConfigProvider.views.maxCache(5);
   $ionicConfigProvider.tabs.position("bottom");
 
-
-  $urlRouterProvider.when("", "/main");
+  $urlRouterProvider.when("", "/main/index");
+  
   $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
     .state("main", {
       url: "/main",
-      //abstract: true,
+      abstract: true,
       templateUrl: "views/main.html"
     })
-    .state('main.index', {
+
+    .state('main.home', {
       url: '/index',
       views: {
-        'tab-index': {
+        'home-tab': {
           templateUrl: 'views/index.html',
           controller: 'indexCtrl'
         }
       }
     })
-    .state('main.info', {
-      url: '/info',
+
+    .state('main.buy', {
+      url: '/buy',
       views: {
-        'tab-info': {
-          templateUrl: 'views/info.html'
-      //    controller: 'infoCtrl as ctrl'
+        'home-tab': {
+          templateUrl: 'views/buy.html'
         }
       }
     })
-    .state('main.list', {
-      url: '/list',
-      views: {
-        'tab-list': {
-          templateUrl: 'views/list.html'
-      //    controller: 'infoCtrl as ctrl'
-        }
-      }
+
+    .state('viewlist', {
+        url: '/viewlist',
+        templateUrl: 'views/viewlist.html'
     })
-    .state('main.order', {
-      url: '/order',
-      views: {
-        'tab-order': {
-          templateUrl: 'views/order.html'
-      //    controller: 'infoCtrl as ctrl'
-        }
-      }
-    })
-    .state('main.mine', {
-      url: '/mine',
-      views: {
-        'tab-mine': {
-          templateUrl: 'views/mine.html'
-      //    controller: 'infoCtrl as ctrl'
-        }
-      }
-    })
-    // .state("main.index", {
-    //   url: "/index",
-    //   templateUrl: "views/index.html"
-    // })
-    // .state("main.info", {
-    //   url: "/info",
-    //   templateUrl: "views/info.html"
-    // })
-    // .state("main.list", {
-    //   url: "/list",
-    //   templateUrl: "views/list.html"
-    // })
-    // .state("main.order", {
-    //   url: "/order",
-    //   templateUrl: "views/order.html"
-    // })
-    // .state("main.mine", {
-    //   url: "/mine",
-    //   templateUrl: "views/mine.html"
-    // })
+
     ;
+
 });

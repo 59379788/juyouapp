@@ -21,13 +21,13 @@
   </head>
   <body ng-app="dlq" >
 
-    <div data-ui-view=""></div>
+    <ion-nav-view></ion-nav-view>
 
     <!-- will be a 404 during development -->
     <script src="cordova.js"></script>
 
     <!-- build:js scripts/vendor.js -->
-    <script src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.bundle.js"></script>
     <script src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
     <!-- endbuild -->
 
@@ -35,6 +35,7 @@
     <script src="app.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/controllers/indexCtrl.js"></script>
+    <script src="scripts/controllers/viewlistCtrl.js"></script>
     <!-- endbuild -->
 
   </body>
